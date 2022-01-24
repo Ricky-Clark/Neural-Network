@@ -4,6 +4,7 @@ from layer import Layer_Dense
 from activation import Activation_ReLU
 from datapoints import spiral_data
 from softmax import Activation_Softmax
+from loss import Loss, Loss_CategoricalCrossEntropy, Accuracy
 
 # Features
 # Batch of Inputs 
@@ -25,3 +26,11 @@ layer2.forward(activation1.output)
 activation2.forward(layer2.output)
 
 print(activation2.output[:5])
+
+loss_function = Loss_CategoricalCrossEntropy()
+loss = loss_function.calculate(activation2.output, y)
+accuracy_function = Accuracy()
+accuracy = accuracy_function.calculate(activation2.output, y)
+
+print("Loss: ", loss)
+print("Accuracy: ", accuracy)
