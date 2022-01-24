@@ -1,6 +1,13 @@
+# Network Layers
+# Creating a layer
+# Normalize Data to be between -1 to 1 if possible
+# Initialize Weights - typically random num -0.1 to 0.1 
+# Biases may be zero. If network is dead may need to increase your bias
+
 # Imports
 import numpy as np
 
+# Set numpy random seed
 np.random.seed(0)
 
 # Layer Class
@@ -20,7 +27,3 @@ class Layer_Dense:
 
     def print_output(self):
         print(self.output)
-# Creating a layer
-# Normalize Data to be between -1 to 1 if possible
-# Initialize Weights - typically random num -0.1 to 0.1 
-# Biases may be zero. If network is dead may need to increase your bias
