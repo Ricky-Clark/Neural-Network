@@ -14,6 +14,7 @@ def spiral_data(points, classes):
         y[ix] = class_number
     return X, y
 
+# Plotting of spiral data
 # # Create data
 # print("here")
 # X, y = create_data(100, 3)
