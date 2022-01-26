@@ -9,6 +9,11 @@ class Activation_ReLU:
         # Calculate ouptut from given input
         self.output = np.maximum(0, inputs)
 
+        # Set inputs as they are needed
+        # for calculating the derivative
+        # of the ReLU
+        self.inputs = inputs
+
     # Backward pass
     def backward(self, dvalues):
         # Since we modify the original variable
